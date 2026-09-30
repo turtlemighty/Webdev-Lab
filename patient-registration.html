@@ -99,6 +99,15 @@
     <button type="reset">Reset</button>
 
   </form>
+  <div id="confirmationMessage" style="display: none; text-align: center; padding: 20px;">
+    <h2 style="color: #2e7d32;">Registration Successful!</h2>
+    <p>Thank you, <strong id="confirmName"></strong>. Your registration has been submitted.</p>
+    
+    <!-- Dynamic message populated by JS -->
+    <p id="confirmDeliveryText"></p> 
+    
+    <button onclick="location.reload()" style="margin-top: 15px; padding: 8px 16px;">Register Another Patient</button>
+  </div>
 </div>
 
 <div class="footer">

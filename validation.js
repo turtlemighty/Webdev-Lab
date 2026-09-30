@@ -68,6 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isValid) {
             event.preventDefault();
         }
+        if (isValid) {
+            event.preventDefault(); // Stop page reload
+
+            // Extract input values
+            const nameValue = document.getElementById('patientName').value.trim();
+            const emailValue = document.getElementById('email').value.trim();
+            const mobileValue = document.getElementById('mobile').value.trim();
+
+            // Get selected report format radio button value
+            const selectedFormat = document.querySelector('input[name="reportFormat"]:checked').value;
+
+            // Target HTML elements
+            document.getElementById('confirmName').innerText = nameValue;
+            const deliveryText = document.getElementById('confirmDeliveryText');
+
+            // Handle delivery message based on selected report format
+            if (selectedFormat === 'PDF') {
+                deliveryText.innerHTML = `Your report will be sent via email to <strong>${emailValue}</strong>.`;
+            } else if (selectedFormat === 'SMS') {
+                deliveryText.innerHTML = `A download link will be sent via SMS to <strong>${mobileValue}</strong>.`;
+            } else if (selectedFormat === 'Printed') {
+                deliveryText.innerHTML = `A printed copy of your report will be prepared for pick-up at our pathology front desk.`;
+            }
+
+            // Hide form and display confirmation message
+            form.style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+        }
     });
 
     // Helper function to display error styling and messages
