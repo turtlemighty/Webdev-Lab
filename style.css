@@ -64,10 +64,11 @@ body {
 }
 .nav-menu {
     display: flex;
-    gap: 20px;
+    gap: 8px;
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: stretch;
 }
 
 .nav-button {
