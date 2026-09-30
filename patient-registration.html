@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+<div class="header">
+    <img src="logo.png" alt="Hospital Logo" class="header-logo">
+    <h1>Apex HealthCare and Pathology</h1>
+</div>
+
+<div class="navbar-container">
+    <ul class="nav-menu">
+        <li><a href="index.html" class="nav-button">Home</a></li>
+        <li><a href="media.html" class="nav-button">Awareness Campaign</a></li>
+        <li><a href="navigation.html" class="nav-button">Quick Links</a></li>
+        <li><a href="test-information.html" class="nav-button">Our Process</a></li>
+        <li><a href="about-system.html" class="nav-button">About Us</a></li>
+        <li><a href="test-parameters.html" class="nav-button">Test Parameters</a></li>
+        <li><a href="patient-registration.html" class="nav-button">Patient Registration</a></li>
+        <li><a href="patient-report.html" class="nav-button">Patient Report</a></li>
+        <li><a href="urine-strip.html" class="nav-button">Transcripts</a></li>      
+    </ul>
+</div>
+
+
+<div class="container" style="background-color: lightskyblue;">
+    <h1>Online Patient Registration</h1>
+
+  <form action="#" method="post">
+
+    <p>
+      <label for="patientName">Patient Name:</label><br>
+      <input type="text" id="patientName" name="patientName" required>
+    </p>
+
+    <p>
+      <label for="patientId">Patient ID:</label><br>
+      <input type="text" id="patientId" name="patientId" required>
+    </p>
+
+    <p>
+      <label for="age">Age:</label><br>
+      <input type="number" id="age" name="age" min="1" max="120" required>
+    </p>
+
+    <p>
+      <label for="gender">Gender:</label><br>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="mobile">Mobile Number:</label><br>
+      <input type="tel" id="mobile" name="mobile" required>
+    </p>
+
+    <p>
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      <label for="doctorName">Doctor Name:</label><br>
+      <input type="text" id="doctorName" name="doctorName" required>
+    </p>
+
+    <p>
+      <label for="testDate">Test Date:</label><br>
+      <input type="date" id="testDate" name="testDate" required>
+    </p>
+
+    <fieldset>
+      <legend>Symptoms</legend>
+      <label><input type="checkbox" name="symptoms" value="Fever"> Fever</label><br>
+      <label><input type="checkbox" name="symptoms" value="Dysuria"> Dysuria</label><br>
+      <label><input type="checkbox" name="symptoms" value="Abdominal Pain"> Abdominal Pain</label><br>
+      <label><input type="checkbox" name="symptoms" value="Fatigue"> Fatigue</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Preferred Report Format</legend>
+      <label><input type="radio" name="reportFormat" value="PDF" required checked> PDF via Email</label><br>
+      <label><input type="radio" name="reportFormat" value="Printed"> Printed Copy</label><br>
+      <label><input type="radio" name="reportFormat" value="SMS"> SMS Link</label>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+</div>
+
+<div class="footer">
+    Copyright © 2026 Apex HealthCare. All Rights Reserved. | Version 1.0
+</div>
+</body>
+
+</html>
